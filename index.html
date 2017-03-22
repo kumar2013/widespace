@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AdClientLibrary</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="topBanner"></div>
+      </div>
+      <div class="col-md-6">
+        <div id="bottomBanner"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="rightBanner"></div>
+      </div>
+      <div class="col-md-6">
+        <div id="leftBanner"></div>
+      </div>
+    </div>
+  </div>
+  <script src="dist/adClientLibrary.js"></script>
+  <script>
+    var testTop = new AdClientLibrary({'containerId': 'topBanner', 'updateInterval': 2});
+    testTop.runAd();
+    testTop.setUpdateInterval(3);
+    testTop.prefetchAd();
+    testTop.prefetchAd();
+    
+    var testBottom = new AdClientLibrary({'containerId': 'bottomBanner', 'updateInterval': 5});
+    testBottom.runAd();
+    testBottom.prefetchAd();
+  </script>
+</body>
+</html>
